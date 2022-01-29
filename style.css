@@ -1,0 +1,240 @@
+/*Geral===================*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+    background-attachment: fixed;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;  
+}
+/*Navegação===================*/
+
+.navLista {
+    list-style: none;
+    display: flex;
+}
+.navLista li {
+    letter-spacing: 0.05rem;
+    margin-left: 2rem;
+
+}
+a {
+    text-decoration: none;
+    color: #FFF2E7;
+    transition: 0.3s;
+    font-size: 18px;
+}
+.navLista li a:hover {
+    opacity: 0.7;
+}
+.navegacao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Sarala', sans-serif;
+    height: 8vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.logo_png {
+    width: 72px;
+    height: 72px; ;
+
+}
+/*Separador===================*/
+
+hr {
+    border: 0;
+	border-top: 2px solid #FFF2E7;
+    width: 100%;
+    opacity: 20%;
+}
+/*Mobile Menu===================*/
+
+.mobile_menu div {
+    width: 32px;
+    height: 2px;
+    background: #FFF2E7;
+    margin: 8px;
+}
+.mobile_menu:hover {
+    opacity: 70%;
+}
+.mobile_menu {
+    cursor: pointer;
+    display: none;
+  
+}
+@media (max-width:999px){
+    body {
+         overflow-x: hidden;   
+    }
+    .navLista {
+        position: absolute;
+        top: 10vh;
+        right: 0rem;
+        width: 50vw;
+        height: 90vh;
+        background-image:linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .navLista li {
+        margin: 0px;
+        opacity: 0;
+    }
+    .mobile_menu {
+        display: block;
+    }
+
+}
+.navLista.active {
+    transform: translateX(0);
+}
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile_menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile_menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile_menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+/*Conteudo===================*/
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+       
+
+}
+.conteudo button {
+    width: 185px;
+    height: 67px;
+    left: 369px;
+    top: 382px;
+    background: #ECD6C4;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border-style: none;
+    font-family: Sarala;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+    text-align: center;
+    color: #2F2325;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.conteudo button:hover {
+    opacity: 70%;
+}
+.caixaConteudo h1 {
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 79px;
+    color: #FFF2E7;
+}
+.caixaConteudo p {
+    font-family: Sarala;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 39px;
+    color: #ECD6C4;
+    margin:2rem 0 2rem 0;
+}
+/*Conteudo Secundário*/ 
+.conteudosecun hr {
+    margin-bottom: 60px;
+    border: 0;
+	border-top: 2px solid #FFF2E7;
+    opacity: 20%;
+    width: 32%;
+    
+}
+.conteudosecun {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.secun {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteudosecun h3 {
+    margin-bottom: 60px;
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFF2E7;
+
+
+}
+.conteudosecun p {
+    font-family: Sarala;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #ECD6C4;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+/*Footer ===============*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:20px;   
+    margin-bottom:20px; 
+}
+.footer img {
+    width: 15%;
+}
+@media (max-width:999px) {
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .footer img {
+        width: 30%;        
+    }   
+    .caixaConteudo {
+        text-align: center;
+        align-items: center;
+    } 
+}
