@@ -71,12 +71,6 @@ hr {
   
 }
 @media (max-width:999px){
-    header {
-        overflow-x: hidden;
-    }
-    body {
-         overflow-x: hidden;   
-    }
     .navLista {
         position: absolute;
         top: 10vh;
@@ -240,10 +234,4 @@ hr {
         text-align: center;
         align-items: center;
     }
-    body {
-        overflow-x: hidden;
-    }
-    header {
-        overflow-x: hidden;
-    }    
 }
