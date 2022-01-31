@@ -44,6 +44,7 @@ a {
 .logo_png {
     width: 72px;
     height: 72px; ;
+    display: block;
 
 }
 /*Separador===================*/
